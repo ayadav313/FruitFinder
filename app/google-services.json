@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498700731108",
+    "project_id": "fruitfinder-8ec92",
+    "storage_bucket": "fruitfinder-8ec92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498700731108:android:2348f1e60cc459307822f1",
+        "android_client_info": {
+          "package_name": "com.example.fruitfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498700731108-80c7qeobso6322l25ne4r2iite4ata08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJF0_e7nvExDEPovlh4hew9c2oD6yRpjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498700731108-0qfctu8ib64lkhb34d4uk73ers89h6g7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
