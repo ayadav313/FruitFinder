@@ -24,14 +24,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
-
     Button login;
     FirebaseAuth auth;
-
     GoogleSignInClient signInClient;
-
-    int RC_SIGN_IN = 123;
-
+    int RC_SIGN_IN = 40;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +58,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("Firebase", "onActivityResult()");
-        if(resultCode == RC_SIGN_IN){
+        Log.d("Firebase", "onActivityResult()"+ resultCode);
+        if(requestCode == RC_SIGN_IN){
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Log.d("Firebase", "before firebaseAuth(account.getIdToken());");
