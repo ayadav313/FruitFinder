@@ -11,9 +11,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +30,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("Debug", "onClick!");
-                //TODO: Test openCamera()
-                //TODO: Make analyzePicture()
-//                openCamera();
-//                analyzePicture();
-                //TODO: set fruitName from image
-                String fruitName = "apple"; // Replace "banana" with the actual fruit name
+                openCamera();
+                String fruitName = analyzePicture();
                 Intent intent = new Intent(MainActivity.this, FruitInformationActivity.class);
                 intent.putExtra("fruitName", fruitName);
                 startActivity(intent);
@@ -48,17 +47,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        auth = FirebaseAuth.getInstance();
+
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Logout of firebase
+                auth.signOut();
 
                 finish(); // Optional: finish the current activity to prevent going back to it via the back button
             }
         });
     }
 
+    private String analyzePicture() {
+        //TODO: Send picture to Firebase ML Vision Library
+        return "apple";
+    }
+
     private void openCamera() {
+        //TODO: Test openCamera and return image taken by user
         Log.d("Debug", "openCamera!");
 
         // Check if there is a camera app available
