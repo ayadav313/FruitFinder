@@ -31,6 +31,9 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
+//TODO: Transform Basket to Shopping Cart
+//  savedFruits gets filled from Firebase
+//  look through logic, just need to edit it so that each basket/cart can be for each trip
 public class BasketActivity extends AppCompatActivity {
     private ListView savedFruitsListView;
     private SavedFruitAdapter savedFruitAdapter;

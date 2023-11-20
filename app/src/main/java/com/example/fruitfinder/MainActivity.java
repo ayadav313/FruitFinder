@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Button cameraButton = findViewById(R.id.cameraButton);
         Button basketButton = findViewById(R.id.basketButton);
         Button logoutButton = findViewById(R.id.logoutButton);
+
+        //TODO: Button for opening barcode scanner
+
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 finish(); // Optional: finish the current activity to prevent going back to it via the back button
             }
         });
+
+        //TODO: setOnClickListener for barcode Scanner button
+    }
+
+    //TODO: finish open bar code scanner
+    private void openBarcodeScanner() {
+
     }
 
     private String analyzePicture() {

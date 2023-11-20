@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+// Handles Login using Google accounts through Firebase
+
 public class LoginActivity extends AppCompatActivity {
     Button login;
     FirebaseAuth auth;

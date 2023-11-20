@@ -31,6 +31,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+// This activity makes a REST call to fruityvice API for fruit information
+
+// TODO: For ShopNScan we can do something similar, make a REST call to our API for grocery store inventory information
 public class FruitInformationActivity extends AppCompatActivity {
 
     private TextView fruitNameTextView;
